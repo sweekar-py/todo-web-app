@@ -33,9 +33,14 @@ else:
     print("true")
     wff.create_file(filepath_arg=filepath)
 
+st.set_page_config(layout="centered")
 st.title("To Do App - run from Apps folder")
 st.subheader("Add items")
-st.write("This app is to increase your productivity")
+st.write("This app is to increase your <b>productivity</b>",unsafe_allow_html=True)
+st.slider("amount",min_value=1, max_value=10, key="slid")
+#
+# st.balloons()
+st.color_picker(label="color picker", key="color")
 
 for index, todo in enumerate(todo_list):
     checkbox = st.checkbox(todo, key=todo)
