@@ -26,15 +26,5 @@ def create_file(filepath_arg=""):
         raise FNF
 
 
-def show_filedata(filepath_arg=""):
-    try:
-        with open(filepath_arg, "r") as file:
-            todolist_local = file.readlines()
-            for index, todoItem in enumerate(todolist_local):
-                print(f"{index + 1} - {todoItem.strip("\n")}")
-    except FileNotFoundError as FNF:
-        raise FNF
-
-
 if __name__ == "__main__":
     print("Executed from main !")
