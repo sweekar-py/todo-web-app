@@ -41,6 +41,10 @@ st.slider("amount",min_value=1, max_value=10, key="slid")
 #
 # st.balloons()
 st.color_picker(label="color picker", key="color")
+radio_button = st.radio("Amount", options=[10,20,30])
+
+if radio_button == 20:
+    st.info("you selected 20")
 
 for index, todo in enumerate(todo_list):
     checkbox = st.checkbox(todo, key=todo)
